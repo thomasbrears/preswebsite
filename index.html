@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Bio Link</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top-strip">
+        <img src="AUTEventsInductionPortal.jpg" alt="AUT Events Induction Portal" class="logo">
+    </div>
+    <div class="container">
+        <header>
+            <h1 class="project-title">Digitalising & improving the induction experience, managment & record keeping for AUT Events</h1>
+            <p class="project-meta">
+               Aug 2024 - June 2025 <span class="dot-separator">•</span> New Starter Induction, AUT BCIS R&D Project <span class="dot-separator">•</span> Client: AUT Events <span class="dot-separator">•</span> Mentor: Nathan Allan
+            </p>
+            <p class="project-summary">
+                This is a short summary of the project.
+            </p>
+        </header>
+
+        <div class="project-link-section">
+            <a href="https://aut-events-induction.vercel.app/" class="project-link">View Live Project</a>
+            <div class="login-info">
+                <div>You may use this login to access the project:</div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin: 5px 0;">
+                    <div>Email: demo123@brears.xyz</div>
+                    <button class="copy-btn" onclick="copyEmail()">Copy Email</button>
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin: 5px 0;">
+                    <div>Password: demo123</div>
+                    <button class="copy-btn" onclick="copyPassword()">Copy Password</button>
+                </div>
+            </div>
+        </div>
+
+        <section class="team-section">
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <h3 class="member-name">Thomas Brears</h3>
+                    <p class="member-role">Project Manager | Product Owner</p>
+                    <p class="member-bio">Short bio</p>
+                    <div class="social-links">
+                        <a href="https://thomas.brears.xyz" class="social-link">Website</a>
+                        <a href="https://linkedin.com/in/thomasbrears" class="social-link">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <h3 class="member-name">Team Member 2</h3>
+                    <p class="member-role">Role/Title</p>
+                    <p class="member-bio">Short bio</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Link</a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <h3 class="member-name">Team Member 3</h3>
+                    <p class="member-role">Role/Title</p>
+                    <p class="member-bio">Short bio</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Link</a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <h3 class="member-name">Team Member 4</h3>
+                    <p class="member-role">Role/Title</p>
+                    <p class="member-bio">Short bio</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Link</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="poster-section">
+            <h2 class="section-title">Our Poster</h2>
+            <a href="AUTEventsInductionPortal.jpg" target="_blank">
+                <img src="AUTEventsInductionPortal.jpg" alt="Poster" class="poster-image">
+            </a>
+        </section>
+    </div>
+
+    <script>
+        function copyEmail() {
+            const email = "demo123@brears.xyz";
+            navigator.clipboard.writeText(email)
+                .then(() => {
+                    const btn = document.querySelectorAll('.copy-btn')[0];
+                    const originalText = btn.textContent;
+                    btn.textContent = 'Copied!';
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                    }, 2000);
+                })
+                .catch(err => {
+                    console.error('Could not copy text: ', err);
+                    alert('Could not copy email. Please copy manually.');
+                });
+        }
+
+        function copyPassword() {
+            const password = "demo123";
+            navigator.clipboard.writeText(password)
+                .then(() => {
+                    const btn = document.querySelectorAll('.copy-btn')[1];
+                    const originalText = btn.textContent;
+                    btn.textContent = 'Copied!';
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                    }, 2000);
+                })
+                .catch(err => {
+                    console.error('Could not copy text: ', err);
+                    alert('Could not copy password. Please copy manually.');
+                });
+        }
+    </script>
+</body>
+</html>
